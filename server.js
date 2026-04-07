@@ -17,7 +17,7 @@ app.use(cors({
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true,
 }));
-
+app.use("/api", require("./routes/news"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 const io = new Server(server, {
